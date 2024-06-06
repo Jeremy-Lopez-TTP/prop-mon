@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <title>Mónica</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
+    <style>
+      *{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: #fcfcfc;
+}
+.contenedor{
+	margin: auto;
+	width: 900px;
+	margin-top: 150px;
+	text-align: center;
+}
+.titulo{
+	margin-bottom: 10%;
+}
+.opciones p{
+	background: #B695C0;
+	display: initial;
+	padding: 12px;
+	color: #ffffff;
+	border-radius: 2px;
+	font-weight: bold;
+}
+p.p1{
+	position: absolute;
+	top: 250px;
+	left: 500px;
+	width: 100px;
+}
+p.p2{
+	position: absolute;
+	top: 250px;
+	left: 700px;
+	width: 100px;
+}
+#si{
+	background: #B695C0;
+	border-radius: 10%;
+	left: 420px;position: absolute;
+	top: 10%;
+	width: 550px;
+	color: #ffffff;
+	padding: 50px;
+	display: none;
+}
+    </style>
+  </head>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <body>
+  <script>
+      $(document).ready(function(){
+  $(".p1").hover(function(){
+      arriba =  Math.random() * (250 - 1) + 1;
+      abajo =  Math.random() * (500 - 1) + 1;
+    $(this).css("top", arriba);
+    $(this).css("left", abajo);
+    });
+});
+function dijoSi(){
+    document.getElementById("si").style.display = "block";
+}
+  </script>
+
+
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>Mónica, ¿Quieres ser mi novia?</h1>
+        </div>
+        <div class="opciones">
+            
+            <p class="p1">NO</p>
+            <p onclick="dijoSi()" class="p2">SI</p>
+            <div id="si">    
+                    <img id="imagen" src="https://i.pinimg.com/originals/d9/11/a6/d911a60fbaef775210de355e75b10c25.gif" width="70%">
+                    <h2>Gracias preciosa, como quiera ya eramos novios. Feliz primer día de novios oficiales.</h2>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
